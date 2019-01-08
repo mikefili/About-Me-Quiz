@@ -10,10 +10,10 @@ Welcome to Mike Filicetti's About Me Game!
 	- Have fun getting to know me a bit better!
 
 # Correct Answers Snip:
-![Correct Answers](https://github.com/mikefili/Lab01-ABOUT_ME_QUIZ/blob/master/Lab01-ABOUT_ME_QUIZ/correct_answers_snip.PNG?raw=true)
+![Correct Answers](/Lab01-ABOUT_ME_QUIZ/correct_answers_snip.PNG)
 
 # Incorrect Answers Snip:
-![Incorrect Answers](https://github.com/mikefili/Lab01-ABOUT_ME_QUIZ/blob/master/Lab01-ABOUT_ME_QUIZ/incorrect_answers_snip.PNG?raw=true)
+![Incorrect Answers](Lab01-ABOUT_ME_QUIZ/incorrect_answers_snip.PNG)
 
 # Try/Catch Block Snip:
-![Try/Catch Block](https://github.com/mikefili/Lab01-ABOUT_ME_QUIZ/blob/master/Lab01-ABOUT_ME_QUIZ/try_catch_snip.PNG?raw=true)
+![Try/Catch Block](/Lab01-ABOUT_ME_QUIZ/try_catch_snip.PNG)
