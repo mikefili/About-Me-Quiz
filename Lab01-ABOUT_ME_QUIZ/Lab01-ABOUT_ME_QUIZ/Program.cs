@@ -7,8 +7,8 @@ namespace Lab01_ABOUT_ME_QUIZ
         private static int age;
         private static string name;
         private static string birthplace;
-        private static bool siblings;
-        private static bool wutang;
+        private static bool siblings = true;
+        private static bool wutang = false;
 
     public static void Main(string[] args)
         {
@@ -16,10 +16,15 @@ namespace Lab01_ABOUT_ME_QUIZ
             Console.WriteLine("Press ENTER to play");
             Console.ReadLine();
 
-            //Q1();
-            //Q2();
+            Q1();
+            Q2();
             Q3();
-            //Q4();
+            bool answer4 = Q4();
+            if (answer4 == siblings)
+                Console.WriteLine("Correct");
+            else
+                Console.WriteLine("Sorry, I have one sister.");
+            Console.ReadLine();
             //Q5();
         }
 
@@ -86,9 +91,15 @@ namespace Lab01_ABOUT_ME_QUIZ
             }
         }
 
-    public static void Q4()
+    public static bool Q4()
         {
+            Console.WriteLine("Do I have any siblings?");
+            string res1 = Console.ReadLine();
 
+            if (res1.ToUpper() == "YES")
+                return true;
+            else
+                return false;
         }
 
     public static void Q5()
