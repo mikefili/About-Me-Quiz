@@ -16,9 +16,9 @@ namespace Lab01_ABOUT_ME_QUIZ
             Console.WriteLine("Press ENTER to play");
             Console.ReadLine();
 
-            Q1();
-            Q2();
-            //Q3();
+            //Q1();
+            //Q2();
+            Q3();
             //Q4();
             //Q5();
         }
@@ -31,7 +31,7 @@ namespace Lab01_ABOUT_ME_QUIZ
                 age = Convert.ToInt32(Console.ReadLine());
 
                 if (age == 30)
-                    Console.WriteLine("Correct");
+                    Console.WriteLine("Correct!");
                 else if (age != 30)
                     Console.WriteLine("Sorry, I am 30 years old.");
                 Console.ReadLine();
@@ -52,9 +52,9 @@ namespace Lab01_ABOUT_ME_QUIZ
                 name = Console.ReadLine();
                 
                 if (name.ToUpper() == "FILICETTI")
-                    Console.WriteLine("Correct");
+                    Console.WriteLine("Correct!");
                 else if (name.ToUpper() != "FILICETTI")
-                    Console.WriteLine("Sorry, it's a tough name to spell");
+                    Console.WriteLine("Sorry, it's a tough name to spell.");
                 Console.ReadLine();
             }
             catch (Exception e)
@@ -67,7 +67,23 @@ namespace Lab01_ABOUT_ME_QUIZ
 
     public static void Q3()
         {
-            
+            try
+            {
+                Console.WriteLine("I was born in California, but can you guess which city?");
+                birthplace = Console.ReadLine();
+
+                if (birthplace.ToUpper() == "SAN JOSE")
+                    Console.WriteLine("Correct!");
+                else if (birthplace.ToUpper() != "FILICETTI")
+                    Console.WriteLine("Sorry, it's a big state, no shame there.");
+                Console.ReadLine();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("You hit the generic Exception");
+                Console.WriteLine("ERROR: " + e.Message);
+                Console.ReadLine();
+            }
         }
 
     public static void Q4()
