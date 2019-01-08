@@ -8,7 +8,7 @@ namespace Lab01_ABOUT_ME_QUIZ
         private static string name;
         private static string birthplace;
         private static bool siblings = true;
-        private static bool wutang = false;
+        private static bool wutang = true;
 
     public static void Main(string[] args)
         {
@@ -25,7 +25,12 @@ namespace Lab01_ABOUT_ME_QUIZ
             else
                 Console.WriteLine("Sorry, I have one sister.");
             Console.ReadLine();
-            //Q5();
+            bool answer5 = Q5();
+            if (answer5 == wutang)
+                Console.WriteLine("Correct. Wu Tang Clan ain't nothin to f*ck with.");
+            else
+                Console.WriteLine("Sorry. Better protect ya neck.");
+            Console.ReadLine();
         }
 
     public static void Q1()
@@ -102,9 +107,15 @@ namespace Lab01_ABOUT_ME_QUIZ
                 return false;
         }
 
-    public static void Q5()
+    public static bool Q5()
         {
+            Console.WriteLine("Is the Wu Tang Clan something to f*ck with?");
+            string res1 = Console.ReadLine();
 
+            if (res1.ToUpper() == "NO")
+                return true;
+            else
+                return false;
         }
     }
 }
