@@ -8,8 +8,8 @@ namespace Lab01_ABOUT_ME_QUIZ
         private static int age;
         private static string name;
         private static string birthplace;
-        private static bool siblings = true;
-        private static bool wutang = true;
+        private static readonly bool siblings = true;
+        private static readonly bool wutang = true;
 
     // Main method
     public static void Main(string[] args)
@@ -28,22 +28,22 @@ namespace Lab01_ABOUT_ME_QUIZ
             // call question 4 and compare resulting booleans
             bool answer4 = Q4();
             if (answer4 == siblings)
-                Console.WriteLine("Correct");
+                Console.WriteLine("Correct, I have a sister named Sarah");
             else
                 Console.WriteLine("Sorry, I have one sister.");
             // call question 5 and compare resulting booleans
             bool answer5 = Q5();
             if (answer5 == wutang)
-                Console.WriteLine("Correct. Wu Tang Clan ain't nothin to f*ck with.");
+                Console.WriteLine("Correct. The Wu Tang Clan indeed ain't nothin to f*ck with.");
             else
-                Console.WriteLine("Sorry. Better protect ya neck.");
+                Console.WriteLine("Sorry. The Wu Tang Clan ain't nothin to f*ck with. Better protect ya neck.");
             // thank user for playing then close app
             Console.WriteLine("Thanks for playing! Press ENTER to exit.");
             Console.ReadLine();
         }
 
     // Q1 method
-    public static void Q1()
+    public static int Q1()
         {
             // try/catch block that confirms the correct type of input is received
             // try block
@@ -68,6 +68,7 @@ namespace Lab01_ABOUT_ME_QUIZ
                 Console.WriteLine("You hit the generic Exception");
                 Console.WriteLine("ERROR: " + e.Message);
             }
+            return age;
         }
 
     // Q2 method
