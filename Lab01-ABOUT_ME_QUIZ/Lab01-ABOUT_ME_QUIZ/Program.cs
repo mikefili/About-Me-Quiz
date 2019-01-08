@@ -12,12 +12,15 @@ namespace Lab01_ABOUT_ME_QUIZ
 
     public static void Main(string[] args)
         {
-            Console.WriteLine("Welcome to Mike Filicetti's About Me Game");
+            Console.WriteLine("Welcome to Mike's About Me Game");
             Console.WriteLine("Press ENTER to play");
             Console.ReadLine();
 
             Q1();
-            
+            Q2();
+            //Q3();
+            //Q4();
+            //Q5();
         }
 
     public static void Q1()
@@ -43,12 +46,28 @@ namespace Lab01_ABOUT_ME_QUIZ
 
     public static void Q2()
         {
-
+            try
+            {
+                Console.WriteLine("Can you spell my last name?");
+                name = Console.ReadLine();
+                
+                if (name.ToUpper() == "FILICETTI")
+                    Console.WriteLine("Correct");
+                else if (name.ToUpper() != "FILICETTI")
+                    Console.WriteLine("Sorry, it's a tough name to spell");
+                Console.ReadLine();
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("You hit the generic Exception");
+                Console.WriteLine("ERROR: " + e.Message);
+                Console.ReadLine();
+            }
         }
 
     public static void Q3()
         {
-
+            
         }
 
     public static void Q4()
