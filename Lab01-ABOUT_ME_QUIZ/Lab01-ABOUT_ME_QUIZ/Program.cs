@@ -20,19 +20,19 @@ namespace Lab01_ABOUT_ME_QUIZ
             Console.ReadLine();
 
             // call question 1
-            Q1();
+            QuestionOne();
             // call question 2
-            Q2();
+            QuestionTwo();
             // call question 3
-            Q3();
+            QuestionThree();
             // call question 4 and compare resulting booleans
-            bool answer4 = Q4();
+            bool answer4 = QuestionFour();
             if (answer4 == siblings)
                 Console.WriteLine("Correct, I have a sister named Sarah");
             else
                 Console.WriteLine("Sorry, I have one sister.");
             // call question 5 and compare resulting booleans
-            bool answer5 = Q5();
+            bool answer5 = QuestionFive();
             if (answer5 == wutang)
                 Console.WriteLine("Correct. The Wu Tang Clan indeed ain't nothin to f*ck with.");
             else
@@ -42,8 +42,8 @@ namespace Lab01_ABOUT_ME_QUIZ
             Console.ReadLine();
         }
 
-    // Q1 method
-    public static int Q1()
+    // QuestionOne method
+    public static int QuestionOne()
         {
             // try/catch block that confirms the correct type of input is received
             // try block
@@ -52,13 +52,13 @@ namespace Lab01_ABOUT_ME_QUIZ
                 // ask user how old I am
                 Console.WriteLine("How old am I?");
                 // convert user response to int
-                age = Convert.ToInt32(Console.ReadLine());
+                string age = Console.ReadLine();
 
                 // if the user answers "30" write "Correct!"
-                if (age == 30)
+                if (Convert.ToInt32(age) == 30)
                     Console.WriteLine("Correct!");
                 // if the user answers a number other than "30" write "Sorry, I am 30 years old."
-                else if (age != 30)
+                else
                     Console.WriteLine("Sorry, I am 30 years old.");
             }
             // catch block
@@ -71,8 +71,8 @@ namespace Lab01_ABOUT_ME_QUIZ
             return age;
         }
 
-    // Q2 method
-    public static string Q2()
+    // QuestionTwo method
+    public static string QuestionTwo()
         {
             // ask user if they can spell Filicetti
             Console.WriteLine("Can you spell my last name?");
@@ -81,15 +81,15 @@ namespace Lab01_ABOUT_ME_QUIZ
                 
             // convert answer to uppercase & confirm correct spelling
             if (name.ToUpper() == "FILICETTI")
+            {
                 Console.WriteLine("Correct!");
-            // convert answer to uppercase & confirm incorrect spelling
-            else if (name.ToUpper() != "FILICETTI")
-                Console.WriteLine("Sorry, it's a tough name to spell.");
+            }
+            Console.WriteLine("Sorry, it's a tough name to spell.");
             return name;
         }
 
-    // Q3 method
-    public static string Q3()
+    // QuestionThree method
+    public static string QuestionThree()
         {
             // ask user in which Californian city I was born
             Console.WriteLine("I was born in California, but can you guess which city?");
@@ -98,15 +98,15 @@ namespace Lab01_ABOUT_ME_QUIZ
 
             // convert answer to uppercase & confirm correct spelling
             if (birthplace.ToUpper() == "SAN JOSE")
+            {
                 Console.WriteLine("Correct!");
-            // convert answer to uppercase & confirm incorrect spelling
-            else if (birthplace.ToUpper() != "FILICETTI")
-                    Console.WriteLine("Sorry, it's a big state, no shame there.");
+            }
+            Console.WriteLine("Sorry, it's a big state, no shame there.");
             return birthplace;
         }
 
-    // Q4 method
-    public static bool Q4()
+    // QuestionFour method
+    public static bool QuestionFour()
         {
             // ask user if I have any siblings
             Console.WriteLine("Do I have any siblings?");
@@ -121,8 +121,8 @@ namespace Lab01_ABOUT_ME_QUIZ
                 return false;
         }
 
-    // Q5 method
-    public static bool Q5()
+    // QuestionFive method
+    public static bool QuestionFive()
         {
             // ask user if the Wu is something to f*ck with
             Console.WriteLine("Is the Wu Tang Clan something to f*ck with?");
