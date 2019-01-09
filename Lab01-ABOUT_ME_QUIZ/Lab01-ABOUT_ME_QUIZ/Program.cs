@@ -72,7 +72,7 @@ namespace Lab01_ABOUT_ME_QUIZ
         }
 
     // Q2 method
-    public static void Q2()
+    public static string Q2()
         {
             // ask user if they can spell Filicetti
             Console.WriteLine("Can you spell my last name?");
@@ -85,10 +85,11 @@ namespace Lab01_ABOUT_ME_QUIZ
             // convert answer to uppercase & confirm incorrect spelling
             else if (name.ToUpper() != "FILICETTI")
                 Console.WriteLine("Sorry, it's a tough name to spell.");
+            return name;
         }
 
     // Q3 method
-    public static void Q3()
+    public static string Q3()
         {
             // ask user in which Californian city I was born
             Console.WriteLine("I was born in California, but can you guess which city?");
@@ -101,6 +102,7 @@ namespace Lab01_ABOUT_ME_QUIZ
             // convert answer to uppercase & confirm incorrect spelling
             else if (birthplace.ToUpper() != "FILICETTI")
                     Console.WriteLine("Sorry, it's a big state, no shame there.");
+            return birthplace;
         }
 
     // Q4 method
